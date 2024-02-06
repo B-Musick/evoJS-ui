@@ -3,6 +3,8 @@
 
 <template>
   <main>
-    Home
+    <div class="text-3xl font-bold underline ">
+      Hello world!
+    </div>
   </main>
 </template>
