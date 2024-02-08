@@ -1,4 +1,5 @@
-import type { Fasta } from './types';
+import type { Sequence } from './types';
+import * as constants from '../lib/constants';
 
 export default function multiFastaParser (content: string) : Fasta[] {
     const splitContent = splitFastas(content);
@@ -53,3 +54,9 @@ function extractLocus(definition_line:string){
 function extractAccession(definition_line:string){
     return definition_line.split(',')[0].split(' ').slice(1).join(' ');
 }
+
+export function apiUri (key: string): string {
+    const uri = constants.API_BASE + key
+  
+    return uri
+  }

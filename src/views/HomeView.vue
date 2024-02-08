@@ -1,17 +1,25 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import Modal from '../components/Modal.vue';
 import FileInput from '@/components/FileInput.vue';
 import * as constants from '../lib/constants';
+import { type Sequence } from '../lib/types';
+import sequencesApi from '../api/sequences';
 
 const isOpen = ref(false);
 const extension = ref('');
+const sequence = ref<Sequence>();
+onMounted(async () => {
+
+    sequence.value = (await sequencesApi.get(2)).unwrap()
+})
+
 </script>
 
 <template>
   <main>
     <div class="text-3xl font-bold underline ">
-      Hello world!
+      Hello world! {{ sequence }}
     </div>
     <button @click="isOpen = !isOpen">Open</button>
     <teleport to="body">

@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { Fasta } from '../lib/types';
+import { type Sequence } from '../lib/types';
 import multiFastaParser from '../lib/helpers';
 
 const props = defineProps(['extension']);
@@ -18,7 +18,7 @@ const emit = defineEmits<{
 
 const file = ref();
 const content = ref('');
-const fastas = ref<Fasta[]>();
+const fastas = ref<Sequence[]>();
 
 const handleFileUpload = async () => {
     const reader = new FileReader();
