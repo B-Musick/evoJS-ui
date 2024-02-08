@@ -73,3 +73,16 @@ npm run test:unit -- --headless # for headless testing
 ```sh
 npm run lint
 ```
+
+
+# FASTA
+https://www.ncbi.nlm.nih.gov/genbank/fastaformat/
+https://en.wikipedia.org/wiki/FASTA_format#cite_note-5
+
+# Typescript
+
+## Create custom types
+https://www.digitalocean.com/community/tutorials/how-to-create-custom-types-in-typescript
+
+## Type assertion
+https://stackoverflow.com/questions/15826745/typescript-creating-an-empty-typed-container-array
